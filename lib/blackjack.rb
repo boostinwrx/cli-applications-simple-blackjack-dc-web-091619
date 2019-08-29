@@ -3,12 +3,12 @@ def welcome
 end
 
 def deal_card
-  sum = rand(1..11) 
-  return sum
+  rand(1..11) 
 end
 
 def display_card_total(card_total)
   puts "Your cards add up to #{card_total}"
+  return card_total
 end
 
 def prompt_user
@@ -23,10 +23,10 @@ def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
-def initial_round(card_total)
-deal_card 
+def initial_round
 deal_card
-
+deal_card
+display_card_total
 end
 
 def hit?
